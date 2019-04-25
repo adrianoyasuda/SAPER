@@ -1,1 +1,25 @@
+.content-left{
+	position: absolute;
+    overscroll-behavior: auto;
+    width: 200px;
+    top: 130px;
+}
 
+.content-center{
+	position: absolute;
+    overscroll-behavior: auto;
+    left: 225px;
+        top: 130px;
+
+}
+
+.list-group .texto-menu{
+    text-decoration: none;
+    color: #1b1e21;
+}
+
+.texto-menu:hover{
+    font-weight: bold;
+    background: #1b1e21;
+    color: #ffffff;
+}
