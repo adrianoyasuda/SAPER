@@ -14,7 +14,7 @@
 
 			<div class="container">
 				<a class="navbar-brand btn btn-light" href="/">
-					<img class="d-inline-block align-top" src="imgs/logo.png" width="50" height="30" alt="">Question</a>
+					<img href="/" class="d-inline-block align-top" src="imgs/logo.png" width="50" height="30" alt="">Question</a>
 
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
@@ -45,37 +45,66 @@
 
 	<body>
 		<div class="container">
-			<div class="row">
-				<div class="col-sm-4 col-md-3 sidebar">
+			<div class="row mt-5">
+				<div class="col-md-3 sidebar">
 				    <div class="list-group">
-				        <span href="#" class="list-group-item active">
+				        <span href="#" class="list-group-item cat-sidebar">
 				            <span class="pull-right" id="slide-submenu">
-				                <b class="fa fa-times">Submenu</b>
+				                <b class="fa fa-times">Categorias</b>
 				            </span>
 				        </span>
-				        <a href="/tads" class="list-group-item texto-menu">TADS</a>
-				        <a href="/mamb" class="list-group-item texto-menu">Meio Ambiente</a>
-				        <a href="/mec" class="list-group-item texto-menu">Mecanica</a>
+
+				        <a href="/tads" class="list-group-item texto-menu">
+                            <i class="fa fa-folder-open-o">
+                                <img src="/imgs/sidebar/ic_tads.png" width="23" height="23"> TADS
+                            </i>
+                        </a>
+
+				        <a href="/mamb" class="list-group-item texto-menu">
+                            <i class="fa fa-folder-open-o">
+                                <img src="/imgs/sidebar/ic_mamb.png" width="23" height="23"> Meio Ambiente
+                            </i>
+                        </a>
+
+				        <a href="/mec" class="list-group-item texto-menu">
+                            <i class="fa fa-folder-open-o">
+                                <img src="/imgs/sidebar/ic_mec.png" width="23" height="23"> Mecanica
+                            </i>
+                        </a>
 
 				        <a href="/fis" class="list-group-item texto-menu">
-				            <i class="fa fa-folder-open-o">Fisica</i>
-				            <span class="badge">14</span>
+				            <i class="fa fa-folder-open-o">
+                                <img src="/imgs/sidebar/ic_fis.png" width="23" height="23"> Fisica
+                            </i>
 				        </a>
 
 				        <a href="/soc" class="list-group-item texto-menu">
-				            <i class="fa fa-bar-chart-o">Sociais</i>
+				            <i class="fa fa-bar-chart-o">
+                                <img src="/imgs/sidebar/ic_soc.png" width="23" height="23"> Sociais
+                            </i>
 				            <span class="badge badge-danger">14</span>
 				        </a>
 
-				        <a href="/humor" class="list-group-item texto-menu">Humor</a>
-				        <a href="/divers" class="list-group-item texto-menu">Diversos</a>
+				        <a href="/humor" class="list-group-item texto-menu">
+                            <img src="/imgs/sidebar/ic_meme.png" width="23" height="23"> Meme
+                        </a>
+
+				        <a href="/b" class="list-group-item texto-menu">
+                            <img src="/imgs/sidebar/ic_b.png" width="23" height="23"> Diversos
+                        </a>
 				    </div>
 		    	</div>
+
+                <div class="col-md-7" >
+                    <div class="scroll-container square scrollbar-dusty-grass square thin">
+                        <div class="card-body">
+                                @yield('content')
+                        </div>
+                    </div>
+                </div>
 		    </div>
 
-			<div class="justify-content-end">
-				@yield('content')
-			</div>
+
 		</div>
 	</body>
 </html>
