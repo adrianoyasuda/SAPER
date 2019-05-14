@@ -75,23 +75,14 @@
                             </div>
                         </div>
 
-                        <div class="form-group row">
-                            <label for="registro" class="col-md-4 col-form-label text-md-right">{{ __('Sou Professor') }}</label>
-                            <div class="col-md-6">
-                                <input class="tipo_check" type="checkbox" name="tipo" value="1">
-                            </div>
-                        </div>
-
-
-
-                        <div class="form-group row">
-                            <label for="ico_url" class="col-md-4 col-form-label text-md-right">{{ __('Avatar') }}</label>
-                            <div class="col-md-6">
-                                <div class="dropzone">
-                                    <div class="info"></div>
-                                </div>
-                            </div>
-                        </div>
+{{--                        <div class="form-group row">--}}
+{{--                            <label for="ico_url" class="col-md-4 col-form-label text-md-right">{{ __('Avatar') }}</label>--}}
+{{--                            <div class="col-md-6">--}}
+{{--                                <div class="dropzone">--}}
+{{--                                    <div class="info"></div>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
 
                         <link href="./css/style.css" rel="stylesheet" media="screen">
 
