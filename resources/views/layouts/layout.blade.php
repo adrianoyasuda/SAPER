@@ -38,6 +38,12 @@
                                 </li>
                             @endif
                         @else
+                            <div class="container">
+                                <button type="button" class="btn btn-outline-sucess btn-black-mod">
+                                    <img src="imgs/upload.png" width="25" height="25"> <strong>Post</strong>
+                                </button>
+                            </div>
+
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }} <span class="caret"></span>

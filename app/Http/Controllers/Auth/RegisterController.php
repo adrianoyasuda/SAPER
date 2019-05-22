@@ -71,7 +71,7 @@ class RegisterController extends Controller
 //        }
 
         $tipo = 0;
-        
+
         return User::create([
             'name' => $data['name'],
             'email' => $data['email'],

@@ -45,6 +45,14 @@
     position: absolute;
     top: 13px;
 }
+
+.btn-black-mod{
+    color: #000;
+    width: auto;
+    height: 35px;
+    display: inline-block;
+
+}
 /*.thin::-webkit-scrollbar {*/
 /*    width: 5px;*/
 /*}*/
