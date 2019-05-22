@@ -38,10 +38,32 @@
                                 </li>
                             @endif
                         @else
+
+                            <!-- Button trigger modal -->
                             <div class="container">
-                                <button type="button" class="btn btn-outline-sucess btn-black-mod">
-                                    <img src="imgs/upload.png" width="25" height="25"> <strong>Post</strong>
+                                <button type="button" class="btn btn-outline-sucess btn-black-mod" data-toggle="modal" data-target="#exampleModal">
+                                  <img src="imgs/upload.png" width="25" height="25"> <strong>Post</strong>
                                 </button>
+                            </div>
+                            <!-- Modal -->
+                            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                              <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                  <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Titulo</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                      <span aria-hidden="true">&times;</span>
+                                    </button>
+                                  </div>
+                                  <div class="modal-body">
+                                    Uplado aki
+                                  </div>
+                                  <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                                    <button type="button" class="btn btn-primary">Postar</button>
+                                  </div>
+                                </div>
+                              </div>
                             </div>
 
                             <li class="nav-item dropdown">
