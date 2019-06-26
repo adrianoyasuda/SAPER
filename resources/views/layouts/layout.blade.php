@@ -10,6 +10,13 @@
 		<link rel="stylesheet" type="text/css" href="./css/estilo.css">
 
 	    <script src="{{ asset('js/app.js') }}" defer></script>
+
+
+        <!----Imgur---->
+        <script src="{{ asset('js/imgur.js') }}" defer></script>
+        <script src="{{ asset('js/upload.js') }}" defer></script>
+        <link href="./css/imgur.css" rel="stylesheet" media="screen">
+
 	</head>
 
 
@@ -56,7 +63,10 @@
                                     </button>
                                   </div>
                                   <div class="modal-body">
-                                    Uplado aki
+
+                                        <div class="dropzone"></div>
+                                        <!-- <img src="https://i.imgur.com/7fk4lhy.jpg"> -->
+
                                   </div>
                                   <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>

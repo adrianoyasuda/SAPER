@@ -1,4 +1,3 @@
-/* Imgur Upload Script */
 (function (root, factory) {
     "use strict";
     if (typeof define === 'function' && define.amd) {
@@ -74,12 +73,9 @@
         createDragZone: function () {
             var p1, input;
 
-            p1 = this.createEls('img', {src: 'http://www.iconarchive.com/download/i83719/custom-icon-design/mono-general-4/upload.ico' });
             input = this.createEls('input', {type: 'file', className: 'input', accept: 'image/*'});
 
-            Array.prototype.forEach.call(this.info, function (zone) {
-                zone.appendChild(p1);
-            }.bind(this));
+
             Array.prototype.forEach.call(this.dropzone, function (zone) {
                 zone.appendChild(input);
                 this.status(zone);
@@ -107,7 +103,7 @@
 
             if (file.type.match(/image/) && file.type !== 'image/svg+xml') {
                 document.body.classList.add('loading');
-                status.classList.remove('bg-success', 'bg-danger');
+                status.classList.remove('bg-primary', 'bg-danger');
                 status.innerHTML = '';
 
                 var fd = new FormData();
@@ -118,7 +114,7 @@
                     typeof this.callback === 'function' && this.callback.call(this, data);
                 }.bind(this));
             } else {
-                status.classList.remove('bg-success');
+                status.classList.remove('bg-primary');
                 status.classList.add('bg-danger');
                 status.innerHTML = 'Invalid archive';
             }
