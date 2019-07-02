@@ -1,8 +1,7 @@
 let feedback = function (res) {
     if (res.success === true) {
-        let get_link = res.data.link.replace(/^http:\/\//i, 'https://');
-        document.querySelector('.status').innerHTML =
-            ''+'<a>'+get_link+'</a>'+'<br><img src='+get_link+'>';
+        
+        
     }
 
 };

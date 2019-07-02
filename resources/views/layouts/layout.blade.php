@@ -57,15 +57,33 @@
                               <div class="modal-dialog" role="document">
                                 <div class="modal-content">
                                   <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalLabel">Titulo</h5>
+                                    <h5 class="modal-title" id="exampleModalLabel">Qual a sua Duvida ?</h5>
                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                       <span aria-hidden="true">&times;</span>
                                     </button>
                                   </div>
                                   <div class="modal-body">
 
-                                        <div class="dropzone"></div>
-                                        <!-- <img src="https://i.imgur.com/7fk4lhy.jpg"> -->
+
+
+
+                                        <div class="form-group row">
+                                            <label for="email" class="col-md-4 col-form-label text-md-right">Título</label>
+
+                                            <div class="col-md-6">
+                                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+                                            </div>
+                                        </div>
+
+                                            <div class="dropzone"></div>
+
+                                        <div class="form-group row">
+                                            <label for="email" class="col-md-4 col-form-label text-md-right">Descrição</label>
+
+                                            <div class="col-md-6">
+                                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+                                            </div>
+                                        </div>
 
                                   </div>
                                   <div class="modal-footer">
