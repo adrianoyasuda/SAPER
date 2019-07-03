@@ -27,7 +27,7 @@ class HomeController extends Controller
 
         $objQuestion = new Question();
         $objQuestion->title = (Request::input('title'));
-        $objQuestion->img_url = (Request::input('link'));
+        $objQuestion->img_url = (Request::input('img_url'));
         $objQuestion->description = (Request::input('description'));
         $objQuestion->courses = (Request::input('courses'));
         $objQuestion->points = 0;

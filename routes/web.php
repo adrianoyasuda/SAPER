@@ -18,6 +18,8 @@ Route::get('/', function () {
 
 Route::post('/', 'HomeController@listar');
 Route::post('/', 'HomeController@postQuestion');
+Route::get('/grafico','GraficoController@plotar');
+Route::get('/relatorio','UserController@gerarRelatorio');
 
 
 Route::get('/tads', function () {

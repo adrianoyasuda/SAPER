@@ -2,7 +2,7 @@ let feedback = function (res) {
     if (res.success === true) {
         let get_link = res.data.link.replace(/^http:\/\//i, 'https://');
         document.querySelector('.status').innerHTML =
-            ''+'<a name="link" href='+get_link+'>'+get_link+'</a>';
+            ''+'<input  id="img_url" value='+get_link+' type="hidden" name="img_url"></input>';
     }
 
 };

@@ -54,12 +54,14 @@
                             <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                               <div class="modal-dialog" role="document">
                                 <div class="modal-content">
+
                                   <div class="modal-header">
                                     <h5 class="modal-title" id="exampleModalLabel">Qual a sua Duvida ?</h5>
                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                       <span aria-hidden="true">&times;</span>
                                     </button>
                                   </div>
+
                                   <div class="modal-body">
 
                                     <form action="{{ action('HomeController@postQuestion')}}" method="POST">
@@ -75,22 +77,6 @@
                                             </div>
                                         </div>
 
-                                        <div class="form-group row">
-                                            <label for="img_url" class="col-md-4 col-form-label text-md-right">Link da Imagem (Opcional)</label>
-
-                                        <div class="col-md-6">
-                                                <input id="img_url" type=".status" class="form-control" name="img_url" value="{{ old('.status') }}" >
-                                            </div>
-                                        </div>
-
-
-                                        <div class="form-group row">
-                                            <label for="description" class="col-md-4 col-form-label text-md-right">Descrição</label>
-
-                                            <div class="col-md-6">
-                                                <input id="description" type="description" class="form-control" name="description" value="{{ old('description') }}" >
-                                            </div>
-                                        </div>
 
                                         <div class="form-group row">
                                             <label for="categoria" class="col-md-4 col-form-label text-md-right">Categoria</label>
@@ -107,18 +93,30 @@
                                             </div>
                                         </div>
 
+                                        <div class="form-group row">
+                                            <label for="description" class="col-md-4 col-form-label text-md-right">Descrição</label>
+
+                                            <div class="col-md-6">
+                                                <input id="description" type="description" class="form-control" name="description" value="{{ old('description') }}" >
+                                            </div>
+                                        </div>
+
+                                        
+
                                         <input id="userid" type="hidden" class="form-control" name="userid" value="{{ Auth::user()->id }}" >
 
-                                        <label>----------------------------------------Gerador de Link----------------------------------------</label>
+                                        <hr class="style3">
+
                                         <div class="dropzone"></div>
-                                    
-                                  </div>
-                                  <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-                                    <button type="submit" class="btn btn-primary">Postar</button>
+
+                                        <br>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                                            <button type="submit" class="btn btn-primary">Postar</button>
+                                          </div>
+                                    </form>
                                   </div>
                                 </div>
-                                </form>
                               </div>
                             </div>
 
@@ -194,6 +192,12 @@
 				        <a href="/b" class="list-group-item texto-menu">
                             <img src="/imgs/sidebar/ic_b.png" width="23" height="23"> Diversos
                         </a>
+
+
+                        <a href="/grafico" class="list-group-item texto-menu">
+                            <img src="/imgs/sidebar/ic-graph.jpg" width="23" height="23"> Gráfic0
+                        </a>
+
 				    </div>
 		    	</div>
 
