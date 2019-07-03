@@ -12,13 +12,41 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
 
-Route::get('/index', function () {
-    return view('index');
+
+Route::post('/', 'HomeController@listar');
+Route::post('/', 'HomeController@postQuestion');
+
+
+Route::get('/tads', function () {
+    return view('tads');
 });
 
+Route::get('/mamb', function () {
+    return view('mamb');
+});
+
+Route::get('/mec', function () {
+    return view('mec');
+});
+
+Route::get('/fis', function () {
+    return view('fis');
+});
+
+Route::get('/soc', function () {
+    return view('soc');
+});
+
+Route::get('/humor', function () {
+    return view('meme');
+});
+
+Route::get('/b', function () {
+    return view('diversos');
+});
 
 Route::get('/contact', function () {
     return view('contact');

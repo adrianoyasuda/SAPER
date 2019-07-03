@@ -9,8 +9,29 @@ class DatabaseSeeder extends Seeder
      *
      * @return void
      */
-    public function run()
-    {
+    public function run(){
         // $this->call(UsersTableSeeder::class);
+        
+        DB::insert('INSERT INTO categorias (title) VALUES(?)',
+    		array('Tecnologi Analise e Desenvolvimento de Sistemas'));
+
+        DB::insert('INSERT INTO categorias (title) VALUES(?)',
+    		array('Meio Ambiente'));
+
+        DB::insert('INSERT INTO categorias (title) VALUES(?)',
+    		array('Mecanica'));
+
+        DB::insert('INSERT INTO categorias (title) VALUES(?)',
+    		array('Sociais'));
+
+        DB::insert('INSERT INTO categorias (title) VALUES(?)',
+    		array('Diversos'));
+
+        DB::insert('INSERT INTO categorias (title) VALUES(?)',
+    		array('Memes'));
+
+        DB::insert('INSERT INTO categorias (title) VALUES(?)',
+    		array('Outro'));
+
     }
 }

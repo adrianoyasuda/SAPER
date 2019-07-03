@@ -75,20 +75,6 @@
                             </div>
                         </div>
 
-{{--                        <div class="form-group row">--}}
-{{--                            <label for="ico_url" class="col-md-4 col-form-label text-md-right">{{ __('Avatar') }}</label>--}}
-{{--                            <div class="col-md-6">--}}
-{{--                                <div class="dropzone">--}}
-{{--                                    <div class="info"></div>--}}
-{{--                                </div>--}}
-{{--                            </div>--}}
-{{--                        </div>--}}
-
-                        <link href="./css/style.css" rel="stylesheet" media="screen">
-
-                        <script type="text/javascript" src="./js/imgur.js"></script>
-                        <script type="text/javascript" src="./js/upload.js"></script>
-
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
                                 <button type="submit" class="btn btn-primary">

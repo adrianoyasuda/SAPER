@@ -11,12 +11,10 @@
 
 	    <script src="{{ asset('js/app.js') }}" defer></script>
 
-
         <!----Imgur---->
         <script src="{{ asset('js/imgur.js') }}" defer></script>
-        <script src="{{ asset('js/upload.js') }}" defer></script>
+        <script src="{{ asset('js/upload.js') }}" defer></script>        
         <link href="./css/imgur.css" rel="stylesheet" media="screen">
-
 	</head>
 
 
@@ -64,33 +62,63 @@
                                   </div>
                                   <div class="modal-body">
 
+                                    <form action="{{ action('HomeController@postQuestion')}}" method="POST">
 
-
+                                        <input type ="hidden" name="_token" value="{{{ csrf_token() }}}">
+                                        <input type ="hidden" name="postar" value="C">
 
                                         <div class="form-group row">
-                                            <label for="email" class="col-md-4 col-form-label text-md-right">Título</label>
+                                            <label class="col-md-4 col-form-label text-md-right">Titulo</label>
 
                                             <div class="col-md-6">
-                                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+                                                <input id="title" type="title" class="form-control" name="title" >
                                             </div>
                                         </div>
 
-                                            <div class="dropzone"></div>
-
                                         <div class="form-group row">
-                                            <label for="email" class="col-md-4 col-form-label text-md-right">Descrição</label>
+                                            <label for="img_url" class="col-md-4 col-form-label text-md-right">Link da Imagem (Opcional)</label>
 
-                                            <div class="col-md-6">
-                                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+                                        <div class="col-md-6">
+                                                <input id="img_url" type=".status" class="form-control" name="img_url" value="{{ old('.status') }}" >
                                             </div>
                                         </div>
 
+
+                                        <div class="form-group row">
+                                            <label for="description" class="col-md-4 col-form-label text-md-right">Descrição</label>
+
+                                            <div class="col-md-6">
+                                                <input id="description" type="description" class="form-control" name="description" value="{{ old('description') }}" >
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group row">
+                                            <label for="categoria" class="col-md-4 col-form-label text-md-right">Categoria</label>
+                                            <div class="col-md-6">
+                                                <select class="form-control" name="courses">
+                                                  <option value="1">Tecnologi Analise e Desenvolvimento de Sistemas</option>
+                                                  <option value="2">Fisica</option>
+                                                  <option value="3">Meio Ambiente</option>
+                                                  <option value="4">Mecanica</option>
+                                                  <option value="5">Sociais</option>
+                                                  <option value="5">Diversos</option>
+                                                  <option value="6">Memes</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <input id="userid" type="hidden" class="form-control" name="userid" value="{{ Auth::user()->id }}" >
+
+                                        <label>----------------------------------------Gerador de Link----------------------------------------</label>
+                                        <div class="dropzone"></div>
+                                    
                                   </div>
                                   <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-                                    <button type="button" class="btn btn-primary">Postar</button>
+                                    <button type="submit" class="btn btn-primary">Postar</button>
                                   </div>
                                 </div>
+                                </form>
                               </div>
                             </div>
 
