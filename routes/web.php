@@ -13,7 +13,7 @@
 
 
 Route::get('/', 'HomeController@listar');
-Route::post('/', 'HomeController@postQuestion');
+Route::post('/home', 'HomeController@postQuestion');
 
 Route::get('/tads', 'TadsController@listar');
 Route::get('/fis', 'FisController@listar');
@@ -25,6 +25,7 @@ Route::get('/diversos', 'DiversosController@listar');
 
 Route::get('/grafico','GraficoController@plotar');
 Route::get('/relatorio','UserController@gerarRelatorio');
+
 Route::post('/', 'MailController@enviar');
 
 

@@ -9,9 +9,10 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 
 class EnviarEmail extends Mailable{
     use Queueable, SerializesModels;
-    public $view;
-    public $dados;
+
     public $titulo;
+    public $img:
+    public $desc;
     public $name;
     public $email;
     /**
@@ -19,13 +20,13 @@ class EnviarEmail extends Mailable{
      *
      * @return void
      */
-    public function __construct($view, $dados, $titulo, $email, $name ){
+    public function __construct($titulo, $img, $desc, $name, $email){
 
-        $this->view = $view;
-        $this->dados = $dados;
         $this->titulo = $titulo;
-        $this->email = $email;
+        $this->img = $img;
+        $this->desc = $desc;
         $this->name = $name;
+        $this->email = $email;
     }
 
     /**

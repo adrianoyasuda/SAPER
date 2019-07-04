@@ -11,9 +11,14 @@ class MailController extends Controller {
 
     public function enviar() {
 
+        $titulo = Request::input('titulo');
+        $img = Request::input('img');
+        $desc = Request::input('desc');
+        $name = Request::input('name');
+        $email = Request::input('email');
 
-
-
+        \Mail::to($email)->send( new EnviarEmail("mailImportar", $titulo, $img, $desc, $name, $email) );
+                    sleep(1);
 
         return view('mamb');
     }

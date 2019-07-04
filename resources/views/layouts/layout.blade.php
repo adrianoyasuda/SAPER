@@ -203,6 +203,12 @@
                         <a href="/grafico" class="list-group-item texto-menu">
                             <img src="/imgs/sidebar/ic-graph.jpg" width="23" height="23"> Gráfico
                         </a>
+
+                        <a href="/relatorio" class="list-group-item texto-menu">
+                            <img src="/imgs/sidebar/ic_relatorio.png" width="23" height="23"> Relatorio
+                        </a>
+
+
                         @endauth
 
 				    </div>
