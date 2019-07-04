@@ -1,14 +1,18 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use Illuminate\Http\Request;
 use Khill\Lavacharts\Lavacharts;
 use App\Question;
 
-class GraficoController extends Controller
-{
+class GraficoController extends Controller{
+
+    public function __construct(){
+        $this->middleware('auth');
+    }
+    
     public function plotar(){
+
     	$lava = new Lavacharts;
     	$dados = $lava->DataTable();
 
@@ -24,12 +28,11 @@ class GraficoController extends Controller
     	$dados->addStringColumn('Categoria')
     		->addNumberColumn('Nº de Perguntas')
     		->addRow(['TADS',$tads])
-    		->addRow(['MAMB',$mamb])
-    		->addRow(['MEC',$mec])
-    		->addRow(['SOC',$soc])
-    		->addRow(['DIV',$div])
-    		->addRow(['MEME',$meme])
-    		->addRow(['ELSE',$outro]);
+    		->addRow(['Mamb',$mamb])
+    		->addRow(['Mecanica',$mec])
+    		->addRow(['Sociais',$soc])
+    		->addRow(['Diversos',$div])
+    		->addRow(['Memes',$meme]);
 
     		$lava->BarChart('Dados',$dados);
 

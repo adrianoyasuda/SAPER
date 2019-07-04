@@ -72,7 +72,7 @@
                                         <div class="form-group row">
                                             <label class="col-md-4 col-form-label text-md-right">Titulo</label>
 
-                                            <div class="col-md-6">
+                                            <div class="col-md-7">
                                                 <input id="title" type="title" class="form-control" name="title" >
                                             </div>
                                         </div>
@@ -80,15 +80,15 @@
 
                                         <div class="form-group row">
                                             <label for="categoria" class="col-md-4 col-form-label text-md-right">Categoria</label>
-                                            <div class="col-md-6">
+                                            <div class="col-md-7">
                                                 <select class="form-control" name="courses">
-                                                  <option value="1">Tecnologi Analise e Desenvolvimento de Sistemas</option>
+                                                  <option value="1">Tecnologia Analise e Desenvolvimento de Sistemas</option>
                                                   <option value="2">Fisica</option>
                                                   <option value="3">Meio Ambiente</option>
                                                   <option value="4">Mecanica</option>
                                                   <option value="5">Sociais</option>
-                                                  <option value="5">Diversos</option>
-                                                  <option value="6">Memes</option>
+                                                  <option value="6">Diversos</option>
+                                                  <option value="7">Humor</option>
                                                 </select>
                                             </div>
                                         </div>
@@ -96,18 +96,19 @@
                                         <div class="form-group row">
                                             <label for="description" class="col-md-4 col-form-label text-md-right">Descrição</label>
 
-                                            <div class="col-md-6">
-                                                <input id="description" type="description" class="form-control" name="description" value="{{ old('description') }}" >
+                                            <div class="col-md-7">
+                                                <textarea id="description" type="description" class="form-control" name="description" value="{{ old('description') }}"  ></textarea>
                                             </div>
                                         </div>
 
-                                        
 
                                         <input id="userid" type="hidden" class="form-control" name="userid" value="{{ Auth::user()->id }}" >
 
                                         <hr class="style3">
 
-                                        <div class="dropzone"></div>
+
+                                            <div class="dropzone"></div>
+
 
                                         <br>
                                         <div class="modal-footer">
@@ -154,6 +155,12 @@
 				            </span>
 				        </span>
 
+                        <a href="/" class="list-group-item texto-menu">
+                            <i class="fa fa-folder-open-o">
+                                <img src="/imgs/sidebar/ic_home.png" width="23" height="23"> Home
+                            </i>
+                        </a>
+
 				        <a href="/tads" class="list-group-item texto-menu">
                             <i class="fa fa-folder-open-o">
                                 <img src="/imgs/sidebar/ic_tads.png" width="23" height="23"> TADS
@@ -178,27 +185,31 @@
                             </i>
 				        </a>
 
-				        <a href="/soc" class="list-group-item texto-menu">
+				        <a href="/sociais" class="list-group-item texto-menu">
 				            <i class="fa fa-bar-chart-o">
                                 <img src="/imgs/sidebar/ic_soc.png" width="23" height="23"> Sociais
                             </i>
-				            <span class="badge badge-danger">14</span>
 				        </a>
 
 				        <a href="/humor" class="list-group-item texto-menu">
-                            <img src="/imgs/sidebar/ic_meme.png" width="23" height="23"> Meme
+                            <img src="/imgs/sidebar/ic_humor.png" width="23" height="23"> Humor
                         </a>
 
-				        <a href="/b" class="list-group-item texto-menu">
+				        <a href="/diversos" class="list-group-item texto-menu">
                             <img src="/imgs/sidebar/ic_b.png" width="23" height="23"> Diversos
                         </a>
 
-
+                        @auth
                         <a href="/grafico" class="list-group-item texto-menu">
-                            <img src="/imgs/sidebar/ic-graph.jpg" width="23" height="23"> Gráfic0
+                            <img src="/imgs/sidebar/ic-graph.jpg" width="23" height="23"> Gráfico
                         </a>
+                        @endauth
 
 				    </div>
+
+                    <div style="position: absolute; bottom: 0">
+                        <b style="font-size: 12px">&copy;2019 &nbsp;&nbsp;&raquo;&nbsp;&nbsp; Adriano Yasuda &nbsp;&nbsp;&raquo;&nbsp;&nbsp;versão 1.0</b>
+                    </div>
 		    	</div>
 
                 <div class="col-md-7" >
@@ -208,6 +219,11 @@
                         </div>
                     </div>
                 </div>
+
+                <div class="col-md-2">
+                
+                </div>
+
 		    </div>
 
 

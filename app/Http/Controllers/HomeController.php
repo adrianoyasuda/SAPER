@@ -13,10 +13,6 @@ class HomeController extends Controller
      *
      * @return void
      */
-    public function __construct(){
-        $this->middleware('auth');
-    }
-
     /**
      * Show the application dashboard.
      *
@@ -34,11 +30,14 @@ class HomeController extends Controller
         $objQuestion->user_id = (Request::input('userid'));
         $objQuestion->save();
 
-        return view('home');
+        $question = Question::latest()->get();
+
+        return view('home')->with('questions', $question);
     }
 
     public function listar(){
+        $question = Question::latest()->get();
 
-        return view('home');
+        return view('home')->with('questions', $question);
     }
 }

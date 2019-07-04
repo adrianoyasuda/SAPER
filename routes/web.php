@@ -11,44 +11,22 @@
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-});
 
-
-Route::post('/', 'HomeController@listar');
+Route::get('/', 'HomeController@listar');
 Route::post('/', 'HomeController@postQuestion');
+
+Route::get('/tads', 'TadsController@listar');
+Route::get('/fis', 'FisController@listar');
+Route::get('/mamb', 'MambController@listar');
+Route::get('/mec', 'MecController@listar');
+Route::get('/sociais', 'SociaisController@listar');
+Route::get('/humor', 'HumorController@listar');
+Route::get('/diversos', 'DiversosController@listar');
+
 Route::get('/grafico','GraficoController@plotar');
 Route::get('/relatorio','UserController@gerarRelatorio');
+Route::post('/', 'MailController@enviar');
 
-
-Route::get('/tads', function () {
-    return view('tads');
-});
-
-Route::get('/mamb', function () {
-    return view('mamb');
-});
-
-Route::get('/mec', function () {
-    return view('mec');
-});
-
-Route::get('/fis', function () {
-    return view('fis');
-});
-
-Route::get('/soc', function () {
-    return view('soc');
-});
-
-Route::get('/humor', function () {
-    return view('meme');
-});
-
-Route::get('/b', function () {
-    return view('diversos');
-});
 
 Route::get('/contact', function () {
     return view('contact');
